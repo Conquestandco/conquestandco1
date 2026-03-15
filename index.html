@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conquest & Co. Trading Pty Ltd - Premier B2B Wholesale Distributor for Luxury Vehicle Upgrades and Facelifts.">
+    <title>Conquest & Co. Trading Pty Ltd | Luxury Auto Upgrades</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS Variables for Global Theme --- */
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #1a1a1a;
+            --accent-gold: #d4af37;
+            --text-light: #f4f4f4;
+            --text-muted: #aaaaaa;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        /* --- Global Reset & Typography --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(10, 10, 10, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        /* --- Sections (About, Services, Value) --- */
+        section {
+            padding: 100px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--accent-gold);
+        }
+
+        /* --- Services Grid --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--secondary-bg);
+            padding: 40px;
+            border-top: 3px solid var(--accent-gold);
+            text-align: center;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- Two Column Layout for About & Value --- */
+        .two-column {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .two-column div {
+            flex: 1;
+        }
+
+        .two-column p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--secondary-bg);
+            padding: 50px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Add a hamburger menu for mobile later */
+            .hero h1 { font-size: 2.5rem; }
+            .two-column { flex-direction: column; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Conquest & Co.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Offerings</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>ELEVATE BEYOND FACTORY</h1>
+        <p>Premier B2B Wholesale Distributor for Luxury Vehicle Facelifts, Spec Conversions, and Interior/Exterior Modernisation.</p>
+        <a href="#services"><button class="btn">Engine Start</button></a>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">The Automotive Aspiration</h2>
+        <div class="two-column">
+            <div>
+                <h3>Bridging the Gap</h3>
+                <br>
+                <p>Based in New South Wales, Conquest & Co. Trading Pty Ltd is a premier B2B wholesale distributor specializing in high-end automotive parts and accessories for the luxury vehicle market.</p>
+                <p>We provide comprehensive, precision-engineered upgrade solutions designed to elevate prestige vehicles beyond their original factory specifications. By sourcing and distributing only the highest quality aftermarket and OEM-equivalent components, we empower our B2B partners to maximize vehicle equity.</p>
+            </div>
+            <div>
+                <img src="Exterior.PNG" alt="Luxury Car Interior" style="width: 100%; border-radius: 5px; opacity: 0.8;">
+                <img src="Amg-gt.jpg" alt="Luxury Car Interior" style="width: 100%; border-radius: 5px; opacity: 0.8;">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: var(--secondary-bg); max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Core Trade Offerings</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Specification Conversions</h3>
+                    <p>Upgrade base or mid-tier luxury vehicles to flagship, high-specification trim levels. Supplying workshops with the exact components needed to match premier models.</p>
+                </div>
+                <div>
+                <img src="old-porsche.jpg" alt="Luxury Car Interior" style="width: 100%; border-radius: 5px; opacity: 0.8;">
+            </div>
+                <div class="service-card">
+                    <h3>Exterior Facelifts</h3>
+                    <p>Modernize older-model vehicles to seamlessly mirror the exterior design language of the newest releases. From aerodynamic body kits and laser lighting systems to custom grilles.</p>
+                </div>
+                <div>
+                <img src="new-porsche.jpg" alt="Luxury Car Interior" style="width: 100%; border-radius: 5px; opacity: 0.8;">
+            </div>
+                <div class="service-card">
+                    <h3>Interior Modernisation</h3>
+                    <p>Next-generation digital instrument clusters, enhanced infotainment retrofits, premium upholstery, ambient lighting kits, and modernized steering wheel assemblies.</p>
+                </div>
+                <div>
+                <img src="Interior.jpg" alt="Luxury Car Interior" style="width: 100%; border-radius: 5px; opacity: 0.8;">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="value">
+        <h2 class="section-title">Why Partner With Us?</h2>
+        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto;">
+            At Conquest & Co., we understand that luxury is defined by the details. Our commitment to rigorous quality control, deep technical knowledge of luxury platforms, and reliable domestic supply chains within Australia makes us the trusted partner for automotive modernisation. We deliver flawless, factory-grade finishes to your discerning clientele.
+        </p>
+    </section>
+
+    <footer id="contact">
+        <div class="logo">Conquest & Co. Trading Pty Ltd</div>
+        <p>New South Wales, Australia | B2B Automotive Equipment Wholesale</p>
+        <p>Email: admin@conquestandco.com.au | ACN: 695 496 603</p>
+        <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2026 Conquest & Co. Trading Pty Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
